@@ -2,4 +2,23 @@
 
 <h1>{{title}}</h1>
 
+<div class="products">
+
+    {{#products}}
+        <section>
+            <header class="product-header">
+                <h2 class="product-title"><a href="/products/{{slug}}">{{title}}</a></h2>
+                <p class="product-price"><a href="/products/{{slug}}">{{price}}</a></p>
+                <div class="product-meta">By <strong>{{product.brand.name}}</strong>, on
+                    <strong>{{addedAt}}</strong></div>
+            </header>
+            <div class="product-description">
+                <p>{{description}}</p>
+            </div>
+        </section>
+    {{/products}}
+
+</div>
+
+
 {{> footer}}

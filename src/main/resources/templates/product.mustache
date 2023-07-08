@@ -1,0 +1,16 @@
+{{> header}}
+
+<section class="product">
+    <header class="product-header">
+        <h1 class="product-title">{{product.title}}</h1>
+        <p class="product-meta">By  <strong>{{product.brand.name}}</strong>, on <strong>{{product
+        .addedAt}}</strong></p>
+    </header>
+
+    <div class="product-description">
+        {{product.description}}
+        {{product.price}}
+    </div>
+</section>
+
+{{> footer}}
