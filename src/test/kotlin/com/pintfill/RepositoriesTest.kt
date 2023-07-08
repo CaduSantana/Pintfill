@@ -21,7 +21,7 @@ class RepositoriesTests @Autowired constructor(
         val product = Product("Lokal litrão", 3.99, "Great when freezing cold", lokal)
         entityManager.persist(product)
         entityManager.flush()
-        val found = productRepository.findByIdOrNull(product.id!!)
+        val found = productRepository.findByIdOrNull(product.title!!)
         assertThat(found).isEqualTo(product)
     }
 

@@ -8,16 +8,16 @@ import java.time.LocalDateTime
 
 @Entity
 class Product(
-        var title: String,
+        @jakarta.persistence.Id @Id var title: String,
         var price : Double,
         var description: String,
         @ManyToOne var brand: Brand,
         var slug: String = title.toSlug(),
         var addedAt: LocalDateTime = LocalDateTime.now(),
-        @Id @GeneratedValue var id: Long? = null)
+)
 
 @Entity
 class Brand(
-        var name: String,
+        @jakarta.persistence.Id @Id var name: String,
         var description: String? = null,
-        @Id @GeneratedValue var id: Long? = null)
+)
